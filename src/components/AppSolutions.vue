@@ -32,7 +32,7 @@
 <script lang="ts" setup>
 import { onMounted } from 'vue'
 import { Carousel } from 'bootstrap'
-import useSolutionsStore from '@/stores/solutions'
+import useSolutionsStore from '../stores/solutions'
 
 const solutionsStore = useSolutionsStore()
 

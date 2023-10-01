@@ -33,7 +33,7 @@
 </template>
 
 <script lang="ts" setup>
-import useStatementsStore from '@/stores/statements'
+import useStatementsStore from '../stores/statements'
 
 const statementsStore = useStatementsStore()
 
