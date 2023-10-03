@@ -27,7 +27,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 59.1875rem;
     display: block;
     background: url('@/assets/hero/background.png');
     background-size: 100% 59.1875rem;
