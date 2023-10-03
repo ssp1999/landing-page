@@ -10,12 +10,12 @@ interface Statements {
   imagePath: string
 }
 
-interface statementsInterface {
+interface StatementsInterface {
   statements: Statements[]
 }
 
 export default defineStore('statements', {
-  state: (): statementsInterface => ({
+  state: (): StatementsInterface => ({
     statements: [
       {
         description:

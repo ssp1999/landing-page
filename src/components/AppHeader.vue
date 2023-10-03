@@ -1,22 +1,29 @@
 <template>
     <header class="header">
         <div class="container">
+            <button type="button" class="btn-raw header-hamburger" data-bs-toggle="offcanvas" data-bs-target="#sidenavMenu"
+                aria-controls="sidenavMenu">
+                <img src="@/assets/header/hamburger.svg">
+            </button>
             <div class="header-logo">
                 <img class="header-logo-image" src="@/assets/header/logo.svg">
             </div>
-            <div class="header-navbar">
-                <a class="header-navbar-link" href="#solutions">Soluções</a>
-                <a class="header-navbar-link" href="#tariffs">Tarifas</a>
-                <a class="header-navbar-link" href="#statements">Depoimentos</a>
-                <a class="header-navbar-link" href="#register">Cadastro</a>
-                <a class="header-navbar-link" href="#contact">Contato</a>
-                <button type="button" class="header-navbar-button">Entrar</button>
+            <navbar-menu></navbar-menu>
+
+            <button type="button" class="btn-raw header-user-circle">
+                <img src="@/assets/header/user-circle.svg">
+            </button>
+        </div>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="sidenavMenu" aria-labelledby="sidenavMenuLabel">
+            <div class="offcanvas-body">
+                <navbar-menu :showSignIn="false" :isSidebar="true"></navbar-menu>
             </div>
         </div>
     </header>
 </template>
 
 <script lang="ts" setup>
+import NavbarMenu from './NavbarMenu.vue'
 </script>
 
 <style scoped>
@@ -28,49 +35,56 @@
     justify-content: space-between;
 }
 
-.header-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.875rem;
+.btn-raw {
+    display: inline-block;
+    line-height: 1;
+    height: auto;
+    width: auto;
+    padding: unset;
+    margin: unset;
+    background: unset;
+    background-color: unset;
+    border: unset;
+    color: inherit;
+    outline: none;
 }
 
-.header-navbar-link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: .875rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5;
-    transition: all 0.3s ease;
+.header-hamburger,
+.header-user-circle {
+    padding: 4px;
+    color: #FFFFFF;
+
 }
 
-.header-navbar-link:hover {
-    color: #9708cc;
+.header-hamburger img,
+.header-user-circle img {
+    width: 2rem;
 }
 
-.header-navbar-button {
-    display: flex;
-    width: 6.5625rem;
-    height: 1.75rem;
-    padding: .375rem 1.8125rem;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff0;
-    color: #fff;
-    border-radius: 5px;
-    border: 1px solid #fff;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.offcanvas {
+    max-width: 80%;
 }
 
-.header-navbar-button:hover {
-    background-color: #ffffff;
-    color: #9708cc;
-    font-weight: 700;
-    transform: scale(1.1);
+.offcanvas-body {
+    padding: 3.4375rem 2.8125rem;
+}
+
+@media screen and (min-width: 850px) {
+
+    .header-hamburger,
+    .header-user-circle {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 513px) {
+    .header-logo-image {
+        width: 7.125rem;
+    }
+
+    .header-hamburger img,
+    .header-user-circle img {
+        width: 1.5625rem;
+    }
 }
 </style>

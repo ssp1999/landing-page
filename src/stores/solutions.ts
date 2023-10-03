@@ -3,6 +3,10 @@ import Picture1 from '@/assets/solutions/picture-1.png'
 import Picture2 from '@/assets/solutions/picture-2.png'
 import Picture3 from '@/assets/solutions/picture-3.png'
 import Picture4 from '@/assets/solutions/picture-4.png'
+import PictureMobile1 from '@/assets/solutions/picture-mobile-1.png'
+import PictureMobile2 from '@/assets/solutions/picture-mobile-2.png'
+import PictureMobile3 from '@/assets/solutions/picture-mobile-3.png'
+import PictureMobile4 from '@/assets/solutions/picture-mobile-4.png'
 
 interface Solution {
   title: string
@@ -10,6 +14,7 @@ interface Solution {
   linkText: string
   link: string
   imagePath: string
+  imageMobilePath: string
 }
 
 interface SolutionsInterface {
@@ -25,7 +30,8 @@ export default defineStore('solutions', {
           'Venda online com a maior taxa de aprovação possível. Reduza o número de vendas recusadas, autorize o maior número de pagamentos, receba e gerencie seu dinheiro de forma flexível.',
         linkText: 'Cadastre-se',
         link: '#',
-        imagePath: Picture1
+        imagePath: Picture1,
+        imageMobilePath: PictureMobile1
       },
       {
         title: 'Checkout de alta conversão',
@@ -33,7 +39,8 @@ export default defineStore('solutions', {
           'Uma solução de checkout com inúmeros recursos para potencializar ainda mais as suas vendas online. Customize toda a experiência de pagamento, ofereça produtos adicionais, recupere clientes, gere links para que outras pessoas possam promover seus produtos e mais.',
         linkText: 'Saiba mais',
         link: '#',
-        imagePath: Picture2
+        imagePath: Picture2,
+        imageMobilePath: PictureMobile2
       },
       {
         title: 'Controle total do seu fluxo financeiro',
@@ -41,7 +48,8 @@ export default defineStore('solutions', {
           'Filtre as informações que você quer ver e acompanhe seu extrato diariamente para saber quando você vai receber pelas suas vendas. Precisa do dinheiro antes? Antecipe os seus recebíveis com apenas alguns cliques!',
         linkText: 'Clique e conheça',
         link: '#',
-        imagePath: Picture3
+        imagePath: Picture3,
+        imageMobilePath: PictureMobile3
       },
       {
         title: 'Receba as vendas parceladas em até 2 dias úteis',
@@ -49,7 +57,8 @@ export default defineStore('solutions', {
           'Solicite a antecipação de recebíveis online e receba pagamentos com agilidade, sem burocracia e sem juros abusivos. Vamos ajudar o seu negócio a adquirir capital de giro recebendo um dinheiro que já é seu!',
         linkText: 'Aproveite',
         link: '#',
-        imagePath: Picture4
+        imagePath: Picture4,
+        imageMobilePath: PictureMobile4
       }
     ]
   })

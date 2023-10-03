@@ -88,8 +88,6 @@
     gap: 1.6875rem;
 }
 
-
-
 .card {
     width: 100%;
     max-width: 41.5rem;
@@ -151,5 +149,23 @@
     width: .75rem;
     height: .75rem;
     color: #7367F0;
+}
+
+@media screen and (max-width: 968px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tariffs-description {
+        max-width: unset;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 513px) {
+    .card-body {
+        flex-direction: column;
+    }
 }
 </style>

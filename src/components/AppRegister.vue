@@ -104,4 +104,15 @@ const handleRegister = () => {
 .form-field--password .input-group-text {
     background: unset;
 }
+
+@media screen and (max-width: 968px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .register-form {
+        max-width: 33.4375rem;
+    }
+}
 </style>

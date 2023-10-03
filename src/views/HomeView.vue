@@ -94,4 +94,17 @@ import AppFooter from '../components/AppFooter.vue'
     z-index: 10000000;
     cursor: pointer;
 }
+
+@media screen and (max-width: 513px) {
+    .section-title {
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+
+    .section-text {
+        font-size: .75rem;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+}
 </style>
