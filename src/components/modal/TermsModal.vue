@@ -148,4 +148,19 @@
     line-height: 1.5;
     margin-bottom: unset;
 }
+
+@media screen and (max-width: 513px) {
+    .modal-header {
+        padding-bottom: unset;
+    }
+
+    .btn-close img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .modal-body {
+        padding: 0 20px 40px;
+    }
+}
 </style>
